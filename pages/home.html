@@ -1,0 +1,113 @@
+        <h2 align="center" >Νέο Αυτοκίνητο</h2>
+        <h4  align="center" >Kogas</h4>
+    
+      <br>
+
+           
+
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Πινακίδα**</span>
+              </div>
+              <input type="text" class="form-control" aria-label="Sizing example input" ng-model="pinakida" aria-describedby="inputGroup-sizing-default">
+                <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Πλαίσιο</span>
+              </div>
+              <input type="text" class="form-control" aria-label="Sizing example input" ng-model="plaisio" aria-describedby="inputGroup-sizing-default">
+            </div>
+
+            <br>
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Όνομα</span>
+              </div>
+              <input type="text" class="form-control" aria-label="Sizing example input" ng-model="name" aria-describedby="inputGroup-sizing-default">
+                <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Επίθετο</span>
+              </div>
+              <input type="text" class="form-control" aria-label="Sizing example input" ng-model="lastName" aria-describedby="inputGroup-sizing-default">
+            </div>
+
+            <br>
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Κυβικά</span>
+              </div>
+              <input type="text" class="form-control" aria-label="Sizing example input" ng-model="kibika" aria-describedby="inputGroup-sizing-default">
+                <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Άλογα</span>
+              </div>
+              <input type="text" class="form-control" aria-label="Sizing example input" ng-model="aloga" aria-describedby="inputGroup-sizing-default">
+            </div>
+
+            <br>
+
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Μάρκα</span>
+              </div>
+              <input type="text" class="form-control" aria-label="Sizing example input" ng-model="marka" aria-describedby="inputGroup-sizing-default">
+                <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Μοντέλο</span>
+              </div>
+              <input type="text" class="form-control" aria-label="Sizing example input" ng-model="modelo" aria-describedby="inputGroup-sizing-default">
+            </div>
+
+            <br>
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Κωδικός Κινητήρα</span>
+              </div>
+              <input type="text" class="form-control" aria-label="Sizing example input" ng-model="kodikosKinitira" aria-describedby="inputGroup-sizing-default">
+                <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Χρονολογία Αυτοκινήτου</span>
+              </div>
+              <input type="text" class="form-control" aria-label="Sizing example input" ng-model="date" aria-describedby="inputGroup-sizing-default">
+            </div>
+
+
+            <div align="center">
+                <button href='#' class="btn btn-primary" ng-click= "addCar()" >New Submit</button>
+            </div>
+
+<!--
+                <div  class="form-group">
+                    <label>Αποστολέας</label>
+                    <input list="names" class="form-control" ng-model="sender" placeholder="Αποστολέας" />
+                    <datalist id="names" >  
+                        <option  ng-repeat="x in senders">{{x.name}}</option>
+                    </datalist>
+                </div>
+
+              <div class="form-group" ng-hide="num">
+                <label >Αριθμός Πρωτοκόλου</label>
+                <input type="text" class="form-control" ng-model="number" ng-hide="num" placeholder="Αριθμός Πρωτοκόλου">       
+              </div>
+              <div class="form-group" ng-hide="num">
+                <label >Αριθμός Πρωτοκόλου</label>
+                <input type="text" class="form-control" ng-model="number" ng-hide="num" placeholder="Αριθμός Πρωτοκόλου">       
+              </div>
+                <div align="center">
+                    <button href='#' class="btn btn-primary" ng-click= "addRule()" >New Submit</button>
+                 </div>
+                        
+                    <hr/ ng-hide="file">
+                    <form method="POST"  align="center" enctype="multipart/form-data" action="http://localhost:8080/api/upload/">
+                        <table>
+                            <tr><td ng-hide="file">Επισύναψη Αρχείου:</td><td><input type="file" name="file" ng-hide="file" /></td></tr>
+                            <tr><td></td><td><input  type="submit" ng-click= "ProtNum()" onsubmit = "Formvalidation()" formtarget="_blank" value="Upload" onclick="window.location.replace='#!home';" ng-hide="file"/></td></tr>
+                        </table>
+                    </form> 
+                    <hr/ ng-hide="file"> 
+
+            <img data-ng-src="data:image/png;base64,{{user.data}}"/>
+-->
+
+
+               
+            

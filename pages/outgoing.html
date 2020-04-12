@@ -1,0 +1,47 @@
+        <h2 align="center" >Mobile Protocol</h2>
+        <h4  align="center" >Εξερχόμενο</h4>
+
+            <div class="form-group">
+                <label>Αριθμός Πρωτοκόλου</label>
+                <input type="text" class="form-control" ng-model="num" placeholder="Αριθμός">
+              </div>
+            <div class="form-group">
+                <label>Χρονιά εξερχόμενου Πρωτοκόλου</label>
+                <input type="text" class="form-control" ng-model="outYear" placeholder="Χρονιά">
+              </div>
+              <div class="form-group">
+                <label >Θέμα εξερχόμενου Πρωτόκολου</label>
+                <input type="text" class="form-control" ng-model="subject" aria-describedby="emailHelp" placeholder="Θέμα">
+                <small id="themeHelp" class="form-text text-muted">Βοηθητικό κείμενο.</small>
+              </div>
+
+                <div  class="form-group">
+                    <label>Αποδέκτης</label>
+                    <input list="names" class="form-control" ng-model="receiver" placeholder="Αποδέκτης" />
+                    <datalist id="names" >  
+                        <option  ng-repeat="x in senders">{{x.name}}</option>
+                    </datalist>
+                </div>  
+
+                <div  class="form-group">
+                    <label>Κοινοποίηση</label>
+                    <input list="names" class="form-control" ng-model="shared" placeholder="Κοινοποίηση" />
+                    <datalist id="names" >  
+                        <option  ng-repeat="x in senders">{{x.name}}</option>
+                    </datalist>
+                </div>
+                
+                
+                <label >Ημερομηνία εξόδου</label>
+                <input id="datepicker" width="276" type="text" placeholder = "Ημερομηνία εξαγωγής" ng-model="outDate"/>
+                <script>
+                           $('#datepicker').datepicker({
+                            uiLibrary: 'bootstrap4',
+                            format: 'dd/mm/yyyy'
+                        }); 
+     
+                </script>
+
+                <div align="center" >
+                    <button class="btn btn-primary" ng-click= "outgoing()" >Μετατροπή σε εξερχόμενο</button>
+                </div>

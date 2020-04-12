@@ -1,0 +1,126 @@
+        <h2 align="center" >Αναζήτηση Αυτοκινήτου</h2>
+        <h4  align="center" >Κόγκας</h4>
+
+        <br>
+
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Πινακίδα**</span>
+              </div>
+              <input type="text" class="form-control" aria-label="Sizing example input" ng-model="pinakida" aria-describedby="inputGroup-sizing-default">
+                <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Πλαίσιο</span>
+              </div>
+              <input type="text" class="form-control" aria-label="Sizing example input" ng-model="plaisio" aria-describedby="inputGroup-sizing-default">
+            </div>
+
+            <br>
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Όνομα</span>
+              </div>
+              <input type="text" class="form-control" aria-label="Sizing example input" ng-model="name" aria-describedby="inputGroup-sizing-default">
+                <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Επίθετο</span>
+              </div>
+              <input type="text" class="form-control" aria-label="Sizing example input" ng-model="lastName" aria-describedby="inputGroup-sizing-default">
+            </div>
+
+
+            <br>
+
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Κυβικά</span>
+              </div>
+              <input type="text" class="form-control" aria-label="Sizing example input" ng-model="kibika" aria-describedby="inputGroup-sizing-default">
+                <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Άλογα</span>
+              </div>
+              <input type="text" class="form-control" aria-label="Sizing example input" ng-model="aloga" aria-describedby="inputGroup-sizing-default">
+            </div>
+
+            <br>
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Μάρκα</span>
+              </div>
+              <input type="text" class="form-control" aria-label="Sizing example input" ng-model="marka" aria-describedby="inputGroup-sizing-default">
+                <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Μοντέλο</span>
+              </div>
+              <input type="text" class="form-control" aria-label="Sizing example input" ng-model="modelo" aria-describedby="inputGroup-sizing-default">
+            </div>
+
+            <br>
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Κωδικός Κινητήρα</span>
+              </div>
+              <input type="text" class="form-control" aria-label="Sizing example input" ng-model="kodikosKinitira" aria-describedby="inputGroup-sizing-default">
+                <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Χρονολογία Αυτοκινήτου</span>
+              </div>
+              <input type="text" class="form-control" aria-label="Sizing example input" ng-model="xronologia" aria-describedby="inputGroup-sizing-default">
+            </div>
+
+            <br>
+
+            <br>
+
+            <div class="form-group">
+              <label for="comment">Comment:</label>
+              <textarea class="form-control" rows="5" id="comment" ng-model="sxolia"></textarea>
+            </div>
+
+            <br>
+
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Χιλιομετρα 1</span>
+              </div>
+              <input type="text" class="form-control" aria-label="Sizing example input" ng-model="xml1" aria-describedby="inputGroup-sizing-default">
+                <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Χιλιομετρα 2</span>
+              </div>
+              <input type="text" class="form-control" aria-label="Sizing example input" ng-model="xml2" aria-describedby="inputGroup-sizing-default">
+            </div>
+
+            <br>
+            <br>
+
+
+            <div class="form-row" >
+                <div ng-repeat="data in services"> 
+                    <div  >
+                        <ul  class="list-inline">
+                           <li  class="list-group-item list-group-item-success">Σημερινά χιλιόμετρα: {{data.xml1}}</li>          
+                           <li  class="list-group-item list-group-item-danger">Επόμενο service: {{data.xlm2}}</li>
+                           <li  class="list-group-item list-group-item-secondary">Σχόλια: {{data.sxolia}}</li>
+                           <li  class="list-group-item">id: {{data.id}}</li>          
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+            <div align="center">
+            <button class="btn btn-primary" ng-click= "search()"  >Αναζήτηση</button>
+            <button class="btn btn-primary" ng-click= "update()"  >Ενημέρωση</button>
+            </div>
+            <br>
+            <br>
+            <br>
+
+
+
+
+
+            
