@@ -303,19 +303,19 @@ protocolApp.controller('updateController',['$scope','$http','$window',function($
     
         $scope.updateCar = function(){
         
-        $http.post('http://localhost:8080/api/updatecar?pinakida='+$scope.pinakida + '&name='+$scope.name+'&lastName='+$scope.lastName+'&plasio='+$scope.plaisio+'&kibika='+$scope.kibika+'&aloga='+$scope.aloga+'&kodikosKinitira='+$scope.kodikosKinitira+'&xronoligia='+$scope.xronoligia+'&marka='+$scope.marka+'&modelo='+$scope.modelo).then(
-            function (response) {
-                
-                if (response.data == 1)
-                $window.alert("Ενημερώθηκε με επιτυχία το αυτοκίνητο");
-                else
-                $window.alert("ΔΕΝ ενημερώθηκε με επιτυχία το αυτοκίνητο" );
+            $http.post('http://localhost:8080/api/updatecar?pinakida='+$scope.pinakida + '&name='+$scope.name+'&lastName='+$scope.lastName+'&plasio='+$scope.plaisio+'&kibika='+$scope.kibika+'&aloga='+$scope.aloga+'&kodikosKinitira='+$scope.kodikosKinitira+'&xronoligia='+$scope.xronoligia+'&marka='+$scope.marka+'&modelo='+$scope.modelo).then(
+                function (response) {
 
-             
-            }, function (response) {
-                $window.alert(response.data);
-       
-                $window.alert("Αποτυχία με το αυτοκίνητο δεν επικοινωνεί με την βάση δεδομένων" );
+                    if (response.data == 1)
+                    $window.alert("Ενημερώθηκε με επιτυχία το αυτοκίνητο");
+                    else
+                    $window.alert("ΔΕΝ ενημερώθηκε με επιτυχία το αυτοκίνητο" );
+
+
+                }, function (response) {
+                    $window.alert(response.data);
+
+                    $window.alert("Αποτυχία με το αυτοκίνητο δεν επικοινωνεί με την βάση δεδομένων" );
               
                       
          });
@@ -357,6 +357,67 @@ protocolApp.controller('indexController',['$scope','$location','$window','$http'
         
     }]);
 
+protocolApp.controller('updateServiceController',['$scope','$location','$window','$http',function($scope,$location,$window,$http){
+    
+    
+   
+        $scope.search = function(){
+        
+            
+            $http.post('http://localhost:8080/api/services?pinakida='+$scope.pinakida).
+            then(function (response) {
+                
+                $scope.xlm1 = response.data.xlm1
+                $scope.xlm2 = response.data.xlm2
+                $scope.sxolia = response.data.sxolia
+                $scope.id = response.data.id
+                $scope.pinakida = response.data.pinakida
+                
+                }, function (response) {
+    
+                    $window.alert("Error");
+
+                
+                });
+            
+            
+        
+        };
+    
+    
+        $scope.update = function(){
+
+
+
+                $http.post('http://localhost:8080/api/car?pinakida='+$scope.pinakida).
+                then(function (response) {
+
+                    $scope.name = response.data.name;
+                    $scope.lastName = response.data.lastName;
+                    $scope.kibika = response.data.kibika;
+                    $scope.aloga = response.data.aloga;
+                    $scope.kodikosKinitira = response.data.kodikosKinitira;
+                    $scope.xronologia = response.data.xronologia;
+                    $scope.marka = response.data.marka;
+                    $scope.modelo = response.data.modelo;
+                    $scope.plaisio = response.data.plaisio;
+
+                    $scope.data = response.data;
+
+
+
+                    }, function (response) {
+
+                        $window.alert("Error");
+
+
+                    }); 
+
+            };
+
+    
+        
+    }]);
 
     
 
